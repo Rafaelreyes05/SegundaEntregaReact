@@ -34,9 +34,11 @@ export default function Home() {
     <div className="cursos-container">
       <div className="categorias">
         {categorias.map((elm) => (
-          <div key={elm.nombre} className="categoria-elemento">
-            <Link to={`/cursos/categoria/${elm.nombre}`}>{elm.nombre}</Link>
-          </div>
+          <Link to={`/cursos/categoria/${elm.nombre}`}>
+            <div key={elm.nombre} className="categoria-elemento">
+              {elm.nombre}
+            </div>
+          </Link>
         ))}
       </div>
       <div className="col-md-4 lista-cursos">
